@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Article from '@/components/Article'
 import { getArticleDetail } from '@/lib/blogApi'
 
-export default async function BlogContentPage({
+export default async function BlogDetail({
   params,
 }: {
   params: { slug: string };
