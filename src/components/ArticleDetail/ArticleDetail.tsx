@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useEffect } from 'react'
 import Image from 'next/image'
 import MarkdownIt from 'markdown-it'
@@ -11,20 +12,21 @@ require('prismjs/components/prism-typescript')
 require('prismjs/components/prism-bash')
 require('prismjs/components/prism-markdown')
 
-import { ArticleModel } from '@/types/blog/article'
-import styles from './Article.module.css'
+import { Article } from '@/types/blog/article'
+import styles from './ArticleDetail.module.css'
 
 const md = new MarkdownIt()
 
-export default function Article({ data }: { data: ArticleModel }) {
+export default function ArticleDetail({ data }: { data: Article }) {
   const result = matter(data?.article_info.mark_content || '')
 
   useEffect(() => {
+    // window.scrollTo({ top: 0 })
     Prism.highlightAll()
   }, [])
 
   return (
-    <div className="prose" style={{padding: '10px'}}>
+    <div className={`${styles['container']} prose`}>
       <h1>{data?.article_info.title}</h1>
       <dl>
         <dt></dt>

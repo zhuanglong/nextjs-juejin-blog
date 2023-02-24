@@ -1,5 +1,5 @@
 import ArticleList from '@/components/ArticleList'
-import { getArticles } from '@/lib/blogApi'
+import { getArticles } from '@/lib/blog'
 
 export default async function BlogPage({
   params,

@@ -1,5 +1,10 @@
 .container {
-  
+  padding: 10px;
+  background-color: #fff;
+}
+
+.container ul li {
+  margin-bottom: 20px;
 }
 
 .cover-image {

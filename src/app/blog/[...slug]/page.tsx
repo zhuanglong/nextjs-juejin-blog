@@ -1,9 +1,9 @@
 import { notFound } from 'next/navigation'
 
-import Article from '@/components/Article'
-import { getArticleDetail } from '@/lib/blogApi'
+import ArticleDetail from '@/components/ArticleDetail'
+import { getArticleDetail } from '@/lib/blog'
 
-export default async function BlogDetail({
+export default async function ArticleDetailPage({
   params,
 }: {
   params: { slug: string };
@@ -19,7 +19,7 @@ export default async function BlogDetail({
     <>
       <title>{data.article_info.title}</title>
       <meta name="description" content={data.article_info.brief_content} />
-      <Article data={data} />
+      <ArticleDetail data={data} />
     </>
   )
 }

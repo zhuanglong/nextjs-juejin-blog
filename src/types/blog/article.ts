@@ -1,11 +1,11 @@
-export interface ArticleModel {
+export interface Article {
   article_id: string;
   article_info: ArticleInfo;
   category: Category;
   tags: Tag[];
 }
 
-export interface ArticleInfo {
+interface ArticleInfo {
   article_id: string;
   cover_image: string;
   title: string;
@@ -20,12 +20,12 @@ export interface ArticleInfo {
   comment_count: number;
 }
 
-export interface Category {
+interface Category {
   category_id: string;
   category_name: string;
 }
 
-export interface Tag {
+interface Tag {
   id: number;
   tag_id: string;
   tag_name: string;

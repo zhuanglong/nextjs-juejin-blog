@@ -14,7 +14,7 @@ export async function getArticles(uid: string, cursor: number = 0) {
     },
   )
 
-  return res.json()
+  return await res.json()
 }
 
 export async function getArticleDetail(article_id: string) {
@@ -31,5 +31,5 @@ export async function getArticleDetail(article_id: string) {
     },
   )
 
-  return res.json()
+  return await res.json()
 }

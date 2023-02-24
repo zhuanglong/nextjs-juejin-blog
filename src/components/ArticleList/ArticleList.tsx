@@ -2,12 +2,12 @@ import Link from 'next/Link'
 import Image from 'next/image'
 
 import Pagination from '@/components/Pagination'
-import type { ArticleModel } from '@/types/blog/article'
+import type { Article } from '@/types/blog/article'
 
 import styles from './ArticleList.module.css'
 
 type Props = {
-  articles: ArticleModel[];
+  articles: Article[];
   currentPage: number;
   totalPages: number;
 }
