@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 目前用不了，因为 appDir: true 会出现 warn
+# npm run precommit

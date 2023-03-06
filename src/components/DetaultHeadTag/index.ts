@@ -1,1 +1,1 @@
-export { default } from './DetaultHeadTag'
+export { default } from './DetaultHeadTag';

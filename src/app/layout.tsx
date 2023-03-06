@@ -1,11 +1,7 @@
-import './globals.css'
-import 'prismjs/themes/prism-okaidia.css'
+import './globals.css';
+import 'prismjs/themes/prism-okaidia.css';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
@@ -16,5 +12,5 @@ export default function RootLayout({
         <div className="min-h-screen">{children}</div>
       </body>
     </html>
-  )
+  );
 }

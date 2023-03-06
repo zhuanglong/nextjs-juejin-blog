@@ -1,29 +1,29 @@
-'use client'
+'use client';
 
-import React, { useEffect } from 'react'
-import Image from 'next/image'
-import MarkdownIt from 'markdown-it'
-import matter from 'gray-matter'
-import 'prismjs/themes/prism-okaidia.css'
-import Prism from 'prismjs'
-require('prismjs/components/prism-jsx')
-require('prismjs/components/prism-tsx')
-require('prismjs/components/prism-typescript')
-require('prismjs/components/prism-bash')
-require('prismjs/components/prism-markdown')
+import React, { useEffect } from 'react';
+import Image from 'next/image';
+import MarkdownIt from 'markdown-it';
+import matter from 'gray-matter';
+import 'prismjs/themes/prism-okaidia.css';
+import Prism from 'prismjs';
+require('prismjs/components/prism-jsx');
+require('prismjs/components/prism-tsx');
+require('prismjs/components/prism-typescript');
+require('prismjs/components/prism-bash');
+require('prismjs/components/prism-markdown');
 
-import { Article } from '@/types/blog/article'
-import styles from './ArticleDetail.module.css'
+import { Article } from '@/types/blog/article';
+import styles from './ArticleDetail.module.css';
 
-const md = new MarkdownIt()
+const md = new MarkdownIt();
 
 export default function ArticleDetail({ data }: { data: Article }) {
-  const result = matter(data?.article_info.mark_content || '')
+  const result = matter(data?.article_info.mark_content || '');
 
   useEffect(() => {
     // window.scrollTo({ top: 0 })
-    Prism.highlightAll()
-  }, [])
+    Prism.highlightAll();
+  }, []);
 
   return (
     <div className="px-3 md:px-0 mx-auto prose prose-indigo">
@@ -41,16 +41,7 @@ export default function ArticleDetail({ data }: { data: Article }) {
             </time>
           </dd>
         </dl>
-        {data?.article_info.cover_image && (
-          <Image
-            className="max-w-full"
-            src={data?.article_info.cover_image}
-            alt={data?.article_info.title}
-            priority
-            width={1200}
-            height={400}
-          />
-        )}
+        {data?.article_info.cover_image && <Image className="max-w-full" src={data?.article_info.cover_image} alt={data?.article_info.title} priority width={1200} height={400} />}
         <div
           dangerouslySetInnerHTML={{
             __html: md.render(result.content),
@@ -58,5 +49,5 @@ export default function ArticleDetail({ data }: { data: Article }) {
         />
       </div>
     </div>
-  )
+  );
 }

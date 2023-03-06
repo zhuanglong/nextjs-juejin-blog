@@ -16,15 +16,15 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/blog/:id/edit",
+        source: '/blog/:id/edit',
         destination: `/blog/create`,
       },
       {
-        source: "/blog/page/:page",
+        source: '/blog/page/:page',
         destination: `/blog`,
       },
     ];
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

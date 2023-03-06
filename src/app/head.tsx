@@ -1,5 +1,5 @@
-import DetaultHeadTag from '@/components/DetaultHeadTag'
+import DetaultHeadTag from '@/components/DetaultHeadTag';
 
 export default function Head() {
-  return <DetaultHeadTag /> 
+  return <DetaultHeadTag />;
 }
