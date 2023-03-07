@@ -1,6 +1,9 @@
 import Link from 'next/link';
 
+import defaultHeadTags from '@/lib/defaultHeadTags';
 import styles from './page.module.css';
+
+export const metadata = defaultHeadTags;
 
 export default function HomePage() {
   return (

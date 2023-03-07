@@ -1,5 +1,8 @@
+import defaultHeadTags from '@/lib/defaultHeadTags';
 import ArticleList from '@/components/ArticleList';
 import { getArticles } from '@/lib/blog';
+
+export const metadata = defaultHeadTags;
 
 export default async function BlogPage({ params, searchParams }: { params: { slug: string }; searchParams: { [key: string]: string | string[] | undefined } }) {
   const page = Number(searchParams.page) || 1;
