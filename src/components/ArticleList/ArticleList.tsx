@@ -47,7 +47,7 @@ export default function ArticleList({ articles = [], currentPage, totalPages }: 
                   </h3>
                   <div className="mt-3 flex flex-wrap">
                     {article.tags.map((tag) => (
-                      <Link className="mr-3 text-sm font-medium uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400" key={tag.tag_id} href={`/tags/${tag.tag_name}`}>
+                      <Link className="mr-3 text-sm font-medium uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400" key={tag.tag_id} prefetch={false} href={`/tags/${tag.tag_name}`}>
                         {tag.tag_name}
                       </Link>
                     ))}
